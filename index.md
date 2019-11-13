@@ -1,4 +1,4 @@
-<img class="ui medium left floated image" src="doc/landing.png">
+<img class="ui medium image" src="doc/landing.png">
 
 Digits is a sample Meteor application that illustrates:
 
@@ -57,38 +57,8 @@ I20180227-13:33:02.744(-10)?   Adding: Boogie Board (admin@foo.com)
 
 => App running at: http://localhost:3000/
 ```
+But, it's fine.
 
-
-### Note regarding "bcrypt warning":
-
-You will also get the following message when you run this application:
-
-```
-Note: you are using a pure-JavaScript implementation of bcrypt.
-While this implementation will work correctly, it is known to be
-approximately three times slower than the native implementation.
-In order to use the native implementation instead, run
-
-  meteor npm install --save bcrypt
-
-in the root directory of your application.
-```
-
-On some operating systems (particularly Windows), installing bcrypt is much more difficult than implied by the above message. Bcrypt is only used in Meteor for password checking, so the performance implications are negligible until your site has very high traffic. You can safely ignore this warning without any problems during initial stages of development.
-
-### Note regarding "MongoError: not master and slaveOk=false":
-
-Intermittently, you may see the following error message in the console when the system starts up:
-
-```
-MongoError: not master and slaveOk=false
-     at queryCallback (/Users/philipjohnson/.meteor/packages/npm-mongo/.3.1.1.1mmptof.qcqo++os+web.browser+web.browser.legacy+web.cordova/npm/node_modules/mongodb-core/lib/cursor.js:248:25)
-     at /Users/philipjohnson/.meteor/packages/npm-mongo/.3.1.1.1mmptof.qcqo++os+web.browser+web.browser.legacy+web.cordova/npm/node_modules/mongodb-core/lib/connection/pool.js:532:18
-     at _combinedTickCallback (internal/process/next_tick.js:131:7)
-     at process._tickDomainCallback (internal/process/next_tick.js:218:9)
-```
-
-While irritating, this message appears to be harmless and [possibly related to a race condition between the development instance of Mongo and Meteor](https://github.com/meteor/meteor/issues/9026#issuecomment-330850366). By harmless, I mean that in most cases, the console goes on to display `App running at: http://localhost:3000/` and no problems occur during run time.
 
 ### Viewing the running app
 
@@ -116,7 +86,7 @@ By default, each user only sees the Contacts and Notes that they have created.  
 
 When you retrieve the app at http://localhost:3000, this is what should be displayed:
 
-<img class="ui medium left floated image" src="doc/landing.png">
+<img class="ui medium image" src="doc/landing.png">
 
 The next step is to use the Login menu to either Login to an existing account or register a new account.
 
@@ -124,19 +94,19 @@ The next step is to use the Login menu to either Login to an existing account or
 
 Clicking on the Login link, then on the Sign In menu item displays this page:
 
-<img class="ui medium left floated image" src="doc/signin.png">
+<img class="ui medium image" src="doc/signin.png">
 
 #### Register page
 
 Alternatively, clicking on the Login link, then on the Sign Up menu item displays this page:
 
-<img class="ui medium left floated image" src="doc/register.png">
+<img class="ui medium image" src="doc/register.png">
 
 #### Landing (after Login) page, non-Admin user
 
 Once you log in (either to an existing account or by creating a new one), the navbar changes as follows:
 
-<img class="ui medium left floated image" src="doc/regLanding.png">
+<img class="ui medium image" src="doc/regLanding.png">
 
 You can now add new Contact documents, and list the Contacts you have created. Note you cannot see any Stuff created by other users.
 
@@ -144,13 +114,13 @@ You can now add new Contact documents, and list the Contacts you have created. N
 
 After logging in, here is the page that allows you to add new Contacts:
 
-<img class="ui medium left floated image" src="doc/addContact.png">
+<img class="ui medium image" src="doc/addContact.png">
 
 #### List Contact page
 
 After logging in, here is the page that allows you to list all the Contacts and the notes you have created:
 
-<img class="ui medium left floated image" src="doc/listContact.png">
+<img class="ui medium image" src="doc/listContact.png">
 
 You click the "Edit" link to go to the Edit Stuff page, shown next.
 
@@ -158,19 +128,19 @@ You click the "Edit" link to go to the Edit Stuff page, shown next.
 
 After clicking on the "Edit" link associated with a contact, this page displays that allows you to change and save it:
 
-<img class="ui medium left floated image" src="doc/editContact.png">
+<img class="ui medium image" src="doc/editContact.png">
 
 #### Landing (after Login), Admin user
 
 You can define an "admin" user in the settings.json file. This user, after logging in, gets a special entry in the navbar:
 
-<img class="ui medium left floated image" src="doc/adminLanding.png">
+<img class="ui medium image" src="doc/adminLanding.png">
 
 #### Admin page (list all users contacts)
 
 The admin users can see all the contacts created by all of the users:
 
-<img class="ui medium left floated image" src="doc/adminPage.png">
+<img class="ui medium image" src="doc/adminPage.png">
 
 Non-admin users can't get to this page, even if they type in the URL by hand.
 
