@@ -1,7 +1,0 @@
-title: Digits
-description: A simple application for creating and storing contacts.
-google_analytics:
-theme: jekyll-theme-cayman
-
-gems:
-  - jekyll-mentions
