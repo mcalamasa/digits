@@ -1,4 +1,4 @@
-<img src="doc/landing.png" alt="Landing Page">
+<img class="ui medium left floated image" src="doc/landing.png">
 
 Digits is a sample Meteor application that illustrates:
 
@@ -106,46 +106,6 @@ meteor npm run lint
 
 The following sections describe the major features of this application.
 
-### Directory structure
-
-The top-level directory structure is:
-
-```
-app/        # holds the Meteor application sources
-config/     # holds configuration files, such as settings.development.json
-doc/        # holds developer documentation, user guides, etc.
-.gitignore  # don't commit IntelliJ project files, node_modules, and settings.production.json
-```
-
-This structure separates documentation files (such as screenshots) and configuration files (such as the settings files) from the actual Meteor application.
-
-The app/ directory has this structure:
-
-```
-client/
-  main.html      # The boilerplate HTML with a "root" div to be manipulated by React.
-  main.js        # import startup files.
-
-imports/
-  api/           # Define collections
-    stuff/       # The Stuff collection definition
-  startup/       # Define code to run when system starts up (client-only, server-only, both)
-    client/
-    server/
-  ui/
-    layouts/     # Contains top-level layout (<App> component).
-    pages/       # Contains components for each page.
-    components/  # Contains page elements, some of which could appear on multiple pages.
-
-node_modules/    # managed by npm
-
-public/          # static assets (like images) can go here.
-
-server/
-   main.js       # import the server-side js files.
-```
-
-
 ### Application functionality
 
 The application implements a simple CRUD application for managing "Contact" and "Note", which are Mongo Collections.
@@ -156,7 +116,7 @@ By default, each user only sees the Contacts and Notes that they have created.  
 
 When you retrieve the app at http://localhost:3000, this is what should be displayed:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/landing.png)
+<img class="ui medium left floated image" src="doc/landing.png">
 
 The next step is to use the Login menu to either Login to an existing account or register a new account.
 
@@ -164,34 +124,33 @@ The next step is to use the Login menu to either Login to an existing account or
 
 Clicking on the Login link, then on the Sign In menu item displays this page:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/signin.png)
+<img class="ui medium left floated image" src="doc/signin.png">
 
 #### Register page
 
 Alternatively, clicking on the Login link, then on the Sign Up menu item displays this page:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/register.png)
-
+<img class="ui medium left floated image" src="doc/register.png">
 
 #### Landing (after Login) page, non-Admin user
 
 Once you log in (either to an existing account or by creating a new one), the navbar changes as follows:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/regLanding.png)
+<img class="ui medium left floated image" src="doc/regLanding.png">
 
 You can now add new Contact documents, and list the Contacts you have created. Note you cannot see any Stuff created by other users.
 
-#### Add Stuff page
+#### Add Contact page
 
 After logging in, here is the page that allows you to add new Contacts:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/addContact.png)
+<img class="ui medium left floated image" src="doc/addContact.png">
 
-#### List Stuff page
+#### List Contact page
 
 After logging in, here is the page that allows you to list all the Contacts and the notes you have created:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/listContact.png)
+<img class="ui medium left floated image" src="doc/listContact.png">
 
 You click the "Edit" link to go to the Edit Stuff page, shown next.
 
@@ -199,19 +158,19 @@ You click the "Edit" link to go to the Edit Stuff page, shown next.
 
 After clicking on the "Edit" link associated with a contact, this page displays that allows you to change and save it:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/editContact.png)
+<img class="ui medium left floated image" src="doc/editContact.png">
 
 #### Landing (after Login), Admin user
 
 You can define an "admin" user in the settings.json file. This user, after logging in, gets a special entry in the navbar:
 
-![](https://github.com/mcalamasa/digits/blob/master/doc/adminLanding.png)
+<img class="ui medium left floated image" src="doc/adminLanding.png">
 
-#### Admin page (list all users stuff)
+#### Admin page (list all users contacts)
 
 The admin users can see all the contacts created by all of the users:
 
-![](https://github.com/mcalamasa/digits/blob/cleanup/doc/adminPage.png)
+<img class="ui medium left floated image" src="doc/adminPage.png">
 
 Non-admin users can't get to this page, even if they type in the URL by hand.
 
